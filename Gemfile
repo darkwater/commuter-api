@@ -51,3 +51,7 @@ group :development do
 end
 
 gem "0mq", "~> 0.5.3"
+
+gem "activerecord-import", "~> 1.4"
+
+gem "rubyzip", "~> 2.3"
