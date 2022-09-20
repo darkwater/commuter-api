@@ -91,6 +91,7 @@ GEM
       ffi
     globalid (1.0.0)
       activesupport (>= 5.0)
+    graphql (2.0.14)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     io-console (0.5.11)
@@ -229,6 +230,7 @@ DEPENDENCIES
   activerecord-import (~> 1.4)
   bootsnap
   debug
+  graphql (~> 2.0)
   pg (~> 1.1)
   pry (~> 0.14.1)
   puma (~> 5.0)
