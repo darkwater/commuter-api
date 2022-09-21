@@ -200,7 +200,7 @@ class Kv1::ImportAllJob < ApplicationJob
             mapping[:fields].zip(data).reject{|k,v| k.nil?}.to_h
           end
 
-          mapping[:klass].import!(rows)
+          mapping[:klass].import(rows, validate: false)
         end
       end
     end

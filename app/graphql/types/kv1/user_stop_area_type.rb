@@ -4,8 +4,8 @@ module Types
       description "A bunch of related stops"
 
       field :id, ID, null: false
-      field :code, String, null: false
       field :data_owner_code, String, null: false
+      field :user_stop_area_code, String, null: false
       field :name, String, null: false
       field :town, String, null: false
       field :road_side_eq_data_owner_code, String, null: true

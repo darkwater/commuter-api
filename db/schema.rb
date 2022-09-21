@@ -234,9 +234,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_19_190440) do
     t.string "point_code", limit: 10, null: false
     t.date "valid_from", null: false
     t.string "point_type", limit: 10, null: false
-    t.string "rd_x", limit: 15, null: false
-    t.string "rd_y", limit: 15, null: false
-    t.string "location_z", limit: 15
+    t.integer "rd_x", null: false
+    t.integer "rd_y", null: false
+    t.integer "location_z"
     t.string "description", limit: 255
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
