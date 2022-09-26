@@ -70,6 +70,8 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    ar_lazy_preload (1.0.0)
+      rails (>= 5.2)
     ast (2.4.2)
     backport (1.2.0)
     benchmark (0.2.0)
@@ -228,6 +230,7 @@ PLATFORMS
 DEPENDENCIES
   0mq (~> 0.5.3)
   activerecord-import (~> 1.4)
+  ar_lazy_preload (~> 1.0)
   bootsnap
   debug
   graphql (~> 2.0)

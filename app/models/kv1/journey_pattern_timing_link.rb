@@ -4,10 +4,17 @@ class Kv1::JourneyPatternTimingLink < ApplicationRecord
     foreign_key: :line_planning_number,
     primary_key: :line_planning_number
 
-  belongs_to :journey_pattern,
-    class_name: "Kv1::JourneyPattern",
-    foreign_key: :journey_pattern_code,
-    primary_key: :journey_pattern_code
+  # belongs_to :journey_pattern,
+  #   class_name: "Kv1::JourneyPattern",
+  #   foreign_key: :journey_pattern_code,
+  #   primary_key: :journey_pattern_code
+
+  def journey_pattern
+    Kv1::JourneyPattern.find_by(
+      journey_pattern_code: journey_pattern_code,
+      line_planning_number: line_planning_number
+    )
+  end
 
   belongs_to :stop_begin,
     class_name: "Kv1::UserStopPoint",

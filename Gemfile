@@ -57,3 +57,5 @@ gem "activerecord-import", "~> 1.4"
 gem "rubyzip", "~> 2.3"
 
 gem "graphql", "~> 2.0"
+
+gem "ar_lazy_preload", "~> 1.0"

@@ -13,6 +13,7 @@ module Types
       field :description, String, null: true
 
       field :stops, Types::Kv1::UserStopPointType.connection_type, null: false
+      field :lines, Types::Kv1::LineType.connection_type, null: false
     end
   end
 end

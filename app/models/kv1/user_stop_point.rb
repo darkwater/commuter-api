@@ -43,4 +43,11 @@ class Kv1::UserStopPoint < ApplicationRecord
     class_name: "Kv1::PointOnLink",
     foreign_key: :user_stop_code_end,
     primary_key: :user_stop_code
+
+  def lines
+      journey_pattern_timing_links_from.
+        map(&:journey_pattern).
+        map(&:line).
+        uniq
+  end
 end

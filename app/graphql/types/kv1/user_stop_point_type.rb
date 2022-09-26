@@ -5,7 +5,8 @@ module Types
 
       field :id, ID, null: false
       field :data_owner_code, String, null: false
-      field :user_stop_point_code, String, null: false
+      field :user_stop_code, String, null: false
+      field :user_stop_area_code, String, null: true
       field :timing_point_code, String, null: true
       field :get_in, Boolean, null: false
       field :get_out, Boolean, null: false
@@ -19,6 +20,9 @@ module Types
       field :description, String, null: true
       field :user_stop_type, String, null: false
 
+      field :lat, Float, null: true
+      field :long, Float, null: true
+
       field :stop_area, Types::Kv1::UserStopAreaType, null: true
       field :timing_links_from, Types::Kv1::TimingLinkType.connection_type, null: false
       field :timing_links_to, Types::Kv1::TimingLinkType.connection_type, null: false
@@ -28,6 +32,7 @@ module Types
       field :journey_pattern_timing_links_to, Types::Kv1::JourneyPatternTimingLinkType.connection_type, null: false
       field :point_links_from, Types::Kv1::PointOnLinkType.connection_type, null: false
       field :point_links_to, Types::Kv1::PointOnLinkType.connection_type, null: false
+      field :lines, Types::Kv1::LineType.connection_type, null: false
     end
   end
 end
